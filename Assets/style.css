@@ -1,3 +1,38 @@
-.banner{
-    background-color: gray;
+#title{
+    text-align: center;
 }
+.jumbotron{
+    background-color: #add8e6;
+    border-bottom: 1px solid black;
+}
+body{
+    background-color: #edf0f1;
+}
+.row{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.searched{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#allsearches{
+    /* border: 1px black solid; */
+    margin-top: 10px;
+}
+.card-deck{
+    padding-top: 20px;
+}
+
+
+/* .mycon{
+    border: 1px black solid;
+}
+
+.myrow{
+    border: 1px red solid;
+}
+
+.mycol{
+    border: 1px green solid;
+} */
