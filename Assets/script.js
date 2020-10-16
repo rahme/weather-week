@@ -63,12 +63,23 @@ function fiveday(searched){
     url: queryURL,
     method: "GET"
   }).then(function(response){
+    console.log(response)
+    var z = 1
+    var x = 1
+    var y = 1
     for(i=0; i < 5; i++){
-      var temp = (((response.list[i].main.temp) - 273.15) * (9/5) + 32).toFixed(1)
-      $("#temp" + i).text("Temperature: " + temp + "°F")
+      var date = response.list[z].dt_txt
+      $("#day" + i).text(date)
+      z = z+5
     }
     for(i=0; i < 5; i++){
-      $("#humidity" + i).text("Humidity: " + (response.list[i].main.humidity) + "%")
+      var temp = (((response.list[x].main.temp) - 273.15) * (9/5) + 32).toFixed(1)
+      $("#temp" + i).text("Temperature: " + temp + "°F")
+      z = z+5
+    }
+    for(i=0; i < 5; i++){
+      $("#humidity" + i).text("Humidity: " + (response.list[y].main.humidity) + "%")
+      z = z+5
     }
   });
 }
